@@ -1,0 +1,1062 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "App" {
+    subgraph "cluster-SubGraph.App" {
+      graph [
+        label = "App",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#f3f3f3",
+      ];
+      subgraph "cluster-SubGraph.FoundationStack" {
+        graph [
+          label = "FoundationStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "FoundationStack/ApiReaderToken" [
+          label = " ApiReaderToken",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "FoundationStack/ApiWriterToken" [
+          label = " ApiWriterToken",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "FoundationStack/AdminPassword" [
+          label = " AdminPassword",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "FoundationStack/AdminPrivateKey" [
+          label = " AdminPrivateKey",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "FoundationStack/AdminSignedCert" [
+          label = " AdminSignedCert",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "FoundationStack/ExplorerAdminPassword" [
+          label = "\nExplorerAdminPassword",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "FoundationStack/ExplorerDatabasePassword" [
+          label = "\nExplorerDatabasePassw",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "FoundationStack/HostedZone" [
+          label = " HostedZone",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+      subgraph "cluster-SubGraph.LedgerStack" {
+        graph [
+          label = "LedgerStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "LedgerStack/DocumentLedger" [
+          label = " MANAGEDBLOCKCHAIN\nMEMBER DocumentLedger",
+          fontsize = 12,
+        ];
+        "LedgerStack/DocumentLedgerNode" [
+          label = " MANAGEDBLOCKCHAIN\nNODE\nDocumentLedgerNode",
+          fontsize = 12,
+        ];
+      }
+      subgraph "cluster-SubGraph.InterfaceStack" {
+        graph [
+          label = "InterfaceStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "InterfaceStack/HostedZone" [
+          label = " HostedZone",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/DelegationRecord" [
+          label = " DelegationRecord",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "InterfaceStack/Certificate" [
+          label = " Certificate",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "InterfaceStack/ApiVpc" [
+          label = " ApiVpc",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-Virtual-Private-Cloud_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/Api" [
+          label = " Api",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "InterfaceStack/ApiDomainRecord" [
+          label = " ApiDomainRecord",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "InterfaceStack/ApiAuthorizerFunction" [
+          label = "\nApiAuthorizerFunction",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "InterfaceStack/ApiLambdaLayer" [
+          label = " ApiLambdaLayer",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/ApiReaderFunction" [
+          label = " ApiReaderFunction",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/ApiWriterFunction" [
+          label = " ApiWriterFunction",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/SecretsManagerEndpoint" [
+          label = "\nSecretsManagerEndpoin",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "InterfaceStack/LedgerEndpoint" [
+          label = " LedgerEndpoint",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "InterfaceStack/TokenAuthorizer" [
+          label = " TokenAuthorizer",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "InterfaceStack/DefaultVpcEndpoint" [
+          label = " DefaultVpcEndpoint",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+      subgraph "cluster-SubGraph.ExplorerStack" {
+        graph [
+          label = "ExplorerStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "ExplorerStack/Database" [
+          label = " Database",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Compute/Res_48_Dark/Res_Amazon-EC2_T2-Instance_48_Dark.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/HostedZone" [
+          label = " HostedZone",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/DelegationRecord" [
+          label = " DelegationRecord",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "ExplorerStack/Certificate" [
+          label = " Certificate",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "ExplorerStack/Cluster" [
+          label = " Cluster",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_Amazon-Elastic-Container-Service_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/CloudWatchLogsEndpoint" [
+          label = "\nCloudWatchLogsEndpoin",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "ExplorerStack/EcrEndpoint" [
+          label = " EcrEndpoint",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/EcrDockerEndpoint" [
+          label = " EcrDockerEndpoint",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/S3Endpoint" [
+          label = " S3Endpoint",
+          fontsize = 12,
+          image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-VPC_Endpoints_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "ExplorerStack/DefaultVpcEndpointSecurityGroup/from ExplorerStackServiceSecurityGroupD83D98DD_30001-30004" [
+          label = " EC2\nSecurityGroupIngress\nfrom",
+          fontsize = 12,
+        ];
+        subgraph "cluster-SubGraph.DatabaseSubnet0" {
+          graph [
+            label = "DatabaseSubnet0",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/DatabaseSubnet0/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/DatabaseSubnet0/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/DatabaseSubnet0/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.DatabaseSubnet1" {
+          graph [
+            label = "DatabaseSubnet1",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/DatabaseSubnet1/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/DatabaseSubnet1/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/DatabaseSubnet1/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.DatabaseSubnet2" {
+          graph [
+            label = "DatabaseSubnet2",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/DatabaseSubnet2/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/DatabaseSubnet2/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/DatabaseSubnet2/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.ServiceSubnet0" {
+          graph [
+            label = "ServiceSubnet0",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/ServiceSubnet0/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/ServiceSubnet0/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/ServiceSubnet0/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.ServiceSubnet1" {
+          graph [
+            label = "ServiceSubnet1",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/ServiceSubnet1/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/ServiceSubnet1/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/ServiceSubnet1/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.ServiceSubnet2" {
+          graph [
+            label = "ServiceSubnet2",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/ServiceSubnet2/Subnet" [
+            label = " EC2 Subnet Subnet",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/ServiceSubnet2/RouteTable" [
+            label = " EC2 RouteTable\nRouteTable",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53_Route-Table_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "ExplorerStack/ServiceSubnet2/RouteTableAssociation" [
+            label = " EC2\nRouteTableAssociation",
+            fontsize = 12,
+          ];
+        }
+        subgraph "cluster-SubGraph.Service" {
+          graph [
+            label = "Service",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#d6d6d6",
+          ];
+          "ExplorerStack/Service/LB" [
+            label = " LB",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Elastic-Load-Balancing_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "ExplorerStack/Service/DNS" [
+            label = " DNS",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "ExplorerStack/Service/TaskDef" [
+            label = " TaskDef",
+            fontsize = 12,
+            image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Task_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          subgraph "cluster-SubGraph.Service" {
+            graph [
+              label = "Service",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#c7c7c7",
+            ];
+            "ExplorerStack/Service/Service/Service" [
+              label = " ECS Service Service",
+              fontsize = 12,
+              image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Service_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "ExplorerStack/Service/Service/SecurityGroup" [
+              label = " SecurityGroup",
+              fontsize = 12,
+              image = "/usr/local/lib/node_modules/cdk-dia/icons/aws/security_group.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+          }
+        }
+      }
+    }
+  }
+  "LedgerStack/DocumentLedgerNode" -> "LedgerStack/DocumentLedger" [
+    dir = "both",
+  ];
+  "InterfaceStack/DelegationRecord" -> "InterfaceStack/HostedZone" [
+    dir = "both",
+  ];
+  "InterfaceStack/Certificate" -> "InterfaceStack/HostedZone" [
+    dir = "both",
+  ];
+  "InterfaceStack/Api" -> "InterfaceStack/Certificate" [
+    dir = "both",
+  ];
+  "InterfaceStack/Api" -> "InterfaceStack/ApiReaderFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/Api" -> "InterfaceStack/ApiWriterFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/Api" -> "InterfaceStack/TokenAuthorizer" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiDomainRecord" -> "InterfaceStack/HostedZone" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiDomainRecord" -> "InterfaceStack/Api" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiAuthorizerFunction" -> "InterfaceStack/Api" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiAuthorizerFunction" -> "InterfaceStack/TokenAuthorizer" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiReaderFunction" -> "InterfaceStack/ApiVpc" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiReaderFunction" -> "InterfaceStack/ApiLambdaLayer" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiWriterFunction" -> "InterfaceStack/ApiVpc" [
+    dir = "both",
+  ];
+  "InterfaceStack/ApiWriterFunction" -> "InterfaceStack/ApiLambdaLayer" [
+    dir = "both",
+  ];
+  "InterfaceStack/SecretsManagerEndpoint" -> "InterfaceStack/ApiVpc" [
+    dir = "both",
+  ];
+  "InterfaceStack/SecretsManagerEndpoint" -> "InterfaceStack/ApiReaderFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/SecretsManagerEndpoint" -> "InterfaceStack/ApiWriterFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/LedgerEndpoint" -> "InterfaceStack/ApiVpc" [
+    dir = "both",
+  ];
+  "InterfaceStack/LedgerEndpoint" -> "InterfaceStack/ApiReaderFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/LedgerEndpoint" -> "InterfaceStack/ApiWriterFunction" [
+    dir = "both",
+  ];
+  "InterfaceStack/TokenAuthorizer" -> "InterfaceStack/Api" [
+    dir = "both",
+  ];
+  "InterfaceStack/TokenAuthorizer" -> "InterfaceStack/ApiAuthorizerFunction" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet0/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet0/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet0/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet1/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet1/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet1/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet2/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet2/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/DatabaseSubnet2/RouteTableAssociation" -> "ExplorerStack/DatabaseSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Database" -> "ExplorerStack/DatabaseSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Database" -> "ExplorerStack/DatabaseSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Database" -> "ExplorerStack/DatabaseSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Database" -> "ExplorerStack/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "ExplorerStack/DelegationRecord" -> "ExplorerStack/HostedZone" [
+    dir = "both",
+  ];
+  "ExplorerStack/Certificate" -> "ExplorerStack/HostedZone" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet0/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet0/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet0/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet1/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet1/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet1/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet2/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet2/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/ServiceSubnet2/RouteTableAssociation" -> "ExplorerStack/ServiceSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/LB" -> "ExplorerStack/Certificate" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/LB" -> "ExplorerStack/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/DNS" -> "ExplorerStack/HostedZone" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/DNS" -> "ExplorerStack/Service/LB" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/TaskDef" -> "ExplorerStack/Database" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/ServiceSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/ServiceSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/ServiceSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/Cluster" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/Service/LB" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/Service/TaskDef" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/Service" -> "ExplorerStack/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "ExplorerStack/Service/Service/SecurityGroup" -> "ExplorerStack/Service/LB" [
+    dir = "both",
+  ];
+  "ExplorerStack/CloudWatchLogsEndpoint" -> "ExplorerStack/ServiceSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/CloudWatchLogsEndpoint" -> "ExplorerStack/ServiceSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/CloudWatchLogsEndpoint" -> "ExplorerStack/ServiceSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrEndpoint" -> "ExplorerStack/ServiceSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrEndpoint" -> "ExplorerStack/ServiceSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrEndpoint" -> "ExplorerStack/ServiceSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrDockerEndpoint" -> "ExplorerStack/ServiceSubnet0/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrDockerEndpoint" -> "ExplorerStack/ServiceSubnet1/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/EcrDockerEndpoint" -> "ExplorerStack/ServiceSubnet2/Subnet" [
+    dir = "both",
+  ];
+  "ExplorerStack/S3Endpoint" -> "ExplorerStack/ServiceSubnet0/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/S3Endpoint" -> "ExplorerStack/ServiceSubnet1/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/S3Endpoint" -> "ExplorerStack/ServiceSubnet2/RouteTable" [
+    dir = "both",
+  ];
+  "ExplorerStack/DefaultVpcEndpointSecurityGroup/from ExplorerStackServiceSecurityGroupD83D98DD_30001-30004" -> "ExplorerStack/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+}
